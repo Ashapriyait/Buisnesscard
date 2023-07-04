@@ -5,24 +5,26 @@ import com.pages.AddContactPage;
 import com.pages.CompanySignUpPage;
 import com.pages.PersionalSignUpPage;
 import com.pages.SigninPage;
-import com.pages.YujjCardHomePage;
+import com.pages.UpdateAndEditPage;
 
 public class PageObjectManager extends BaseClass {
 	
 	private SigninPage signInPage;
 	private PersionalSignUpPage persionalSignUp;
 	private CompanySignUpPage companySignUpPage;
-	private YujjCardHomePage yujjCardHomePage;
+	private UpdateAndEditPage yujjCardHomePage;
 	private AddContactPage addContactPage;
 
 
+	
+		
 	public AddContactPage getAddContactPage() {
-		return (addContactPage==null)?addContactPage=new AddContactPage():addContactPage;
-	}
+	     return (addContactPage==null)?addContactPage=new AddContactPage():addContactPage;
+	
+		}
 
-
-	public YujjCardHomePage getYujjCardHomePage() {
-		return (yujjCardHomePage==null)?yujjCardHomePage=new YujjCardHomePage():yujjCardHomePage;
+	public UpdateAndEditPage getYujjCardHomePage() {
+		return (yujjCardHomePage==null)?yujjCardHomePage=new UpdateAndEditPage():yujjCardHomePage;
 	}
 
 

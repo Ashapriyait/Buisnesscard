@@ -3,20 +3,23 @@ package com.pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
 import com.base.BaseClass;
-import com.manager.PageObjectManager;
 
 public class AddContactPage extends BaseClass {
-	WebDriver driver;
-	PageObjectManager pomYujj=new PageObjectManager();
+	public AddContactPage() {
+		PageFactory.initElements(driver,this);
+	}
 	
-	@FindBy(xpath="//header[@class='header-collapse']")
+	@FindBy(xpath="//i[@class='pi pi-angle-double-left']")
 	private WebElement clickNotification;
 	
+	
+
 	public WebElement getClickNotification() {
 		return clickNotification;
 	}
-
 	@FindBy(xpath="//i[@class='admnn pi pi-building']")
 	private WebElement clickCompanyAdminProfile;
 	
@@ -67,14 +70,56 @@ public class AddContactPage extends BaseClass {
 	
 	@FindBy(xpath="//button[text()='Create']")
 	private WebElement clickCreate;
+	
+	@FindBy(xpath="(//button[@class='CallBtn'])[13]")
+	private WebElement clickRingCentralbtn;
+	
+	@FindBy(xpath="(//button[@class='CallBtn'])[15]")
+	private WebElement clickCallLogo;
+	
+	@FindBy(xpath="(//button[@class='CallBtn'])[14]")
+	private WebElement clickTeamsLogo;
+	
+	@FindBy(xpath="//li[text()='7010203254']")
+	private WebElement clickCallPhnNo;
+	
+	public WebElement getClickCallPhnNo() {
+		return clickCallPhnNo;
+	}
+
+	public WebElement getClickTeamsLogo() {
+		return clickTeamsLogo;
+	}
+
+	public WebElement getClickCallLogo() {
+		return clickCallLogo;
+	}
+
+	@FindBy(xpath="//li[text()='7010203254']")
+	private WebElement clickPhnNo;
+	
+	@FindBy(xpath="//span[text()=' Profile Viewer ']")
+	private WebElement clickProfileViewer;
+
+	public WebElement getClickProfileViewer() {
+		return clickProfileViewer;
+	}
+
+	public WebElement getClickPhnNo() {
+		return clickPhnNo;
+	}
+
+	public WebElement getClickRingCentralbtn() {
+		return clickRingCentralbtn;
+	}
 
 	public WebDriver getDriver() {
 		return driver;
 	}
 
-	public PageObjectManager getPomYujj() {
-		return pomYujj;
-	}
+	//public PageObjectManager getPomYujj() {
+	//	return getPomYujj();
+	//}
 
 	
 

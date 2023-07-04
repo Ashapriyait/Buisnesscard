@@ -15,7 +15,7 @@ import io.cucumber.junit.Cucumber;
 @CucumberOptions(features="C:\\Users\\Ashapriya_PTS\\eclipse-workspace\\Yujj\\src\\test\\resources\\Features",
 dryRun=false,
 glue="com.stepdefinition",
-tags="@add",
+tags="@CreateContact",
 stepNotifications=true,
 plugin= {"json:src/test/resorces/Yujj/Yujj.json"}
 )

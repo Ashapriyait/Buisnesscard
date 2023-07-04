@@ -14,6 +14,7 @@ Feature: Verifying Yujj SignIn Functionality
     Examples: 
       | email                     | password   |
       | ashapriyait0201@gmail.com | Abcdefg$12 |
+      
 
   @PersonalSignUp
   Scenario Outline: Verifying SignUp functionality for Persional SignIn Page

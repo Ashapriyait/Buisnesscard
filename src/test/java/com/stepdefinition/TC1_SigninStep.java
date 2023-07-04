@@ -18,15 +18,15 @@ public class TC1_SigninStep extends BaseClass{
 	WebDriver driver;
 	PageObjectManager pom=new PageObjectManager();
 	
-//	@Given("user is on Yujj SignIn page")
-//	public void user_is_on_yujj_sign_in_page() throws  FileNotFoundException, IOException {
-//		
-//		getDriverType(getPropertyFileValue("browser"));
-//        enterUrl(getPropertyFileValue("url"));
-//        maximizeWindow();
-//		
-//		
-//	}
+	//@Given("user is on Yujj SignIn page")
+	//public void user_is_on_yujj_sign_in_page() throws  FileNotFoundException, IOException {
+		
+		//getDriverType(getPropertyFileValue("browser"));
+       // enterUrl(getPropertyFileValue("url"));
+       // maximizeWindow();
+		
+		
+	//}
 	@When("user enters {string} and {string}")
 	public void user_enters_and(String email, String password) throws InterruptedException {
 		//driver.manage().timeouts().implicitlyWait(15,TimeUnit.SECONDS) ;
@@ -59,8 +59,7 @@ public class TC1_SigninStep extends BaseClass{
 		//Actions ac = new Actions(driver);
 		Thread.sleep(7000);
 		pom.getSignInPage().getClickThreeDots().click();
-	//	ac.click(clickThreeDots).perform();
-	//	pom.getSignInPage().KeyPress(KeyEvent.VK_ENTER);
+	
 	}
 
 	@When("user click the Signout")
