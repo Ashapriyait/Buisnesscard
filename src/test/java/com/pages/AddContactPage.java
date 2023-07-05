@@ -15,7 +15,12 @@ public class AddContactPage extends BaseClass {
 	@FindBy(xpath="//i[@class='pi pi-angle-double-left']")
 	private WebElement clickNotification;
 	
-	
+	@FindBy(xpath="div[text()=\"Create contact Successfully\"]")
+	private WebElement updateSuccessMsg;
+
+	public WebElement getUpdateSuccessMsg() {
+		return updateSuccessMsg;
+	}
 
 	public WebElement getClickNotification() {
 		return clickNotification;

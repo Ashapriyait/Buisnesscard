@@ -6,6 +6,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
+import java.time.Duration;
 import java.util.Date;
 import java.util.List;
 import java.util.Properties;
@@ -30,7 +31,10 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -57,6 +61,15 @@ public static WebDriver driver;
 		String value =(String)properties.get(key);
 		return value;
 	}	
+	/**
+	 * 
+	 * @Description Webdriver wait using visibilityOfElementLocated by Id
+	 * @param text
+	 */
+	
+//	public void waitVisibilityOfElementLocatedById(int seconds, String text) {
+
+
 
 	/**
 	 *  

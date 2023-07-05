@@ -31,29 +31,50 @@ public class UpdateAndEditPage extends BaseClass{
  @FindBy(xpath="(//button[@class='flex justify-content-between p-button'])[1]")
  private WebElement clickAddPhnType;
  
- @FindBy(id="mat-select-value-1")
+ @FindBy(id="mat-select-value-11")
  private WebElement clickPhoneType;
  
- @FindBy(xpath="//span[text()=' Mobile ']")
- private WebElement clickMobile;
+ @FindBy(id="mat-option-51")
+ private WebElement clickWork;
  
- @FindBy(id="number")
+ @FindBy(xpath="//div[@class=\"mat-form-field-infix ng-tns-c67-39\"]//input[@id=\"number\"]")
  private WebElement txtPhnNo;
  
- @FindBy(xpath="(//button[@class='flex justify-content-between p-button'])[1]")
+ @FindBy(xpath="(//button[@class=\"flex justify-content-between p-button\"])[5]//i[@class='pi pi-plus']")
  private WebElement clickSocialNetworkURL;
  
- @FindBy(id="mat-select-value-5")
+ @FindBy(xpath="//div[@class=\"mat-form-field-infix ng-tns-c67-40\"]")
  private WebElement clickSocialNetwork;
  
  @FindBy(xpath="//span[text()=' Instagram']")
  private WebElement clickInstagram;
- 
- @FindBy(id="url")
+
+ @FindBy(xpath="//span[@class=\"mat-form-field-label-wrapper ng-tns-c67-42\"]")
  private WebElement txtURL;
  
  @FindBy(xpath="//button[text()=' Update']")
  private WebElement clickUpdate;
+ 
+ @FindBy(id="mat-select-value-9")
+ private WebElement clickAccessRole;
+ 
+ @FindBy(xpath="//span[text()=' Profile Viewer ']")
+ private WebElement clickProfileViewer;
+ 
+ @FindBy(xpath="(//span[text()='Activate'])[1]")
+ private WebElement clickActivate;
+
+public WebElement getClickActivate() {
+	return clickActivate;
+}
+
+public WebElement getClickProfileViewer() {
+	return clickProfileViewer;
+}
+
+public WebElement getClickAccessRole() {
+	return clickAccessRole;
+}
 
 public WebElement getClickNotification() {
 	return clickNotification;
@@ -87,8 +108,8 @@ public WebElement getClickPhoneType() {
 	return clickPhoneType;
 }
 
-public WebElement getClickMobile() {
-	return clickMobile;
+public WebElement getClickWork() {
+	return clickWork;
 }
 
 public WebElement getTxtPhnNo() {

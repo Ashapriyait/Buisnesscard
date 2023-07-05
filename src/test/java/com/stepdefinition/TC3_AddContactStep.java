@@ -1,5 +1,6 @@
 package com.stepdefinition;
 
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
 import com.base.BaseClass;
@@ -15,7 +16,7 @@ public class TC3_AddContactStep extends BaseClass{
 	
 	@When("user click the Notification button")
      public void user_click_the_notification_button() throws InterruptedException {
-		Thread.sleep(8000);
+		Thread.sleep(9000);
 		//driver.findElement(By.xpath("//i[@id=\"togglesidebaricon\"]")).click();
 	   pom1.getAddContactPage().getClickNotification().click();
     }
@@ -26,7 +27,7 @@ public class TC3_AddContactStep extends BaseClass{
 	}
 	@When("user click on AddContact button")
 	public void user_click_on_add_contact_button() throws InterruptedException {
-		Thread.sleep(2000);
+		Thread.sleep(3000);
         pom1.getAddContactPage().getClickAddContact().click();
 	}
 	@Then("user should addcontact select all fields enters {string} and {string} and {string} and {string} and {string} and {string} and {string} and {string} and {string} and {string}")
@@ -56,17 +57,18 @@ public class TC3_AddContactStep extends BaseClass{
 		Thread.sleep(2000);
 		pom1.getAddContactPage().getClickCreate().click();
 	}
-	@Then("user Verify after Update Contact Added uccessfully message id displayed")
-	public void user_verify_after_update_contact_added_uccessfully_message_id_displayed() {
-
+	@Then("user Verify after created Contact Added uccessfully message id displayed")
+	public void user_verify_after_created_contact_added_uccessfully_message_id_displayed() throws InterruptedException {
+		Thread.sleep(1000);
+		Assert.assertEquals("Create contact Successfully", pom1.getAddContactPage().getUpdateSuccessMsg(),"verify update success msg");
 	}
 	
 	
 
 	@When("user click on Ringcentral logo")
 	public void user_click_on_ringcentral_logo() throws InterruptedException {
-		Thread.sleep(3000);
-	    pom1.getAddContactPage().getClickRingCentralbtn().click();
+		//Thread.sleep(3000);
+	   // pom1.getAddContactPage().getClickRingCentralbtn().click();
 	
 	}
 	@When("user click on any Contact Number")

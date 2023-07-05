@@ -13,7 +13,7 @@ Feature: Verifiying the AddContact page of Yujj BusinessCard
     And user click on AddContact button
     And user should addcontact select all fields enters "<JobTittle>" and "<Email>" and "<FirstName>" and "<LastName>" and "<PhoneType>" and "<Number>" and "<SocialNetworkType>" and "<URL>" and "<ReportingManager>" and "<AccessRole>"
     And user click on Create button
-    Then user Verify after Update Contact Added uccessfully message id displayed
+    Then user Verify after created Contact Added uccessfully message id displayed
 
     Examples: 
       | email                     | password   | JobTittle  | Email           | FirstName | LastName | PhoneType | Number     | SocialNetworkType | URL          | ReportingManager | AccessRole   |
