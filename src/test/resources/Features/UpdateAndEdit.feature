@@ -1,3 +1,4 @@
+@UpdateContact
 Feature: Verifiying Yujj Edit CardPage
 
   @EditContact

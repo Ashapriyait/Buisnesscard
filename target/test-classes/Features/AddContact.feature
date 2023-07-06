@@ -70,7 +70,6 @@ Feature: Verifiying the AddContact page of Yujj BusinessCard
     And user should addcontact select all fields enters "<JobTittle>" and "<Email>" and "<FirstName>" and "<LastName>" and "<PhoneType>" and "<Number>" and "<SocialNetworkType>" and "<URL>" and "<ReportingManager>" and "<AccessRole>"
     And user click on Create button
     And user click on Teams logo
-    And user click on Teamany Contact Number
 
     Examples: 
       | email                     | password   | JobTittle  | Email             | FirstName | LastName | PhoneType | Number     | SocialNetworkType | URL          | ReportingManager | AccessRole   |

@@ -57,7 +57,7 @@ public class TC1_SigninStep extends BaseClass{
 	@When("user click the three dots")
 	public void user_click_the_three_dots() throws InterruptedException {
 		//Actions ac = new Actions(driver);
-		Thread.sleep(7000);
+		Thread.sleep(9000);
 		pom.getSignInPage().getClickThreeDots().click();
 	
 	}
@@ -121,24 +121,7 @@ public class TC1_SigninStep extends BaseClass{
        
 	}
 
-	@Then("Verify after Email already exists, Please try a different one pop-up should be there")
-	public void verify_after_email_already_exists_please_try_a_different_one_pop_up_should_be_there() {
-		 //pom.getPersionalSignUp().getMessage();
-	      Assert.assertTrue("Verify after Email already exists",true);
-	}
 	
-	//@When("user click on SignUp Back button")
-	//public void user_click_on_sign_up_back_button() throws InterruptedException {
-		//Thread.sleep(8000);
-       // pom.getCompanySignUpPage().getBackBtnClick().click();
-	
-	//}
-	@When("user click the company Sign up here")
-	public void user_click_the_company_sig_n_up_here() throws InterruptedException {
-		Thread.sleep(9000);
-		pom.getCompanySignUpPage().getClickSignUpHere().click();
-		
-	}
 	@When("user click the Company SignUp radio button")
 	public void user_click_the_Company_sign_up_radio_button() throws InterruptedException {
 		Thread.sleep(7000);

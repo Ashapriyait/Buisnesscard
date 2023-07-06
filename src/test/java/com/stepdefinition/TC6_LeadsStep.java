@@ -18,7 +18,7 @@ public class TC6_LeadsStep extends BaseClass {
 	
 	@When("user click on three dots")
 	public void user_click_on_three_dots() throws InterruptedException {
-		Thread.sleep(4000);
+		Thread.sleep(8000);
        pom3.getLeadsPage().getClickThreeDots().click();
 	}
 	@When("user click on Leads Icon")
@@ -88,7 +88,7 @@ public class TC6_LeadsStep extends BaseClass {
 
 	@When("user click on Dont show this again CheckBox")
 	public void user_click_on_dont_show_this_again_check_box() throws InterruptedException {
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		pom3.getLeadsPage().getDontshowthisagainCheckBox().click();
 	}
 	@When("user click on Yes button")
@@ -111,6 +111,98 @@ public class TC6_LeadsStep extends BaseClass {
 		Thread.sleep(7000);
 		 pom3.getLeadsPage().getClickSaveButton().click();
 	}
+	
+
+	@When("user click on Save to One Outlook Logo")
+	public void user_click_on_save_to_one_outlook_logo() throws InterruptedException {
+		Thread.sleep(7000);
+		 pom3.getLeadsPage().getClickOutlookLogo().click();
+	
+	}
+	
+
+	@When("user click on Save to One Hubspot Logo")
+	public void user_click_on_save_to_one_hubspot_logo() throws InterruptedException {
+		Thread.sleep(7000);
+		pom3.getLeadsPage().getClickHubSpotLogo().click();
+	
+	}
+
+
+	@When("user enters Hubspot {string} and {string}")
+	public void user_enters_hubspot_and(String Username, String Password) throws InterruptedException {
+		Thread.sleep(7000);
+		pom3.getLeadsPage().getTxtHubUsername().sendKeys(Username);
+		pom3.getLeadsPage().getTxtHubPassword().sendKeys(Password);
+		
+	}
+	@When("user click on Remember me Box")
+	public void user_click_on_remember_me_box() throws InterruptedException {
+		Thread.sleep(7000);
+		pom3.getLeadsPage().getClickHubRememberBox().click();
+		
+	}
+	@When("user click on Login")
+	public void user_click_on_login() throws InterruptedException {
+		Thread.sleep(9000);
+		pom3.getLeadsPage(). getClickLogin().click();
+	}
+
+//	@When("user enters {string}")
+//	public void user_enters(String EnterCode) throws InterruptedException {
+//		Thread.sleep(7000);
+//		pom3.getLeadsPage().getTxtCode().sendKeys(EnterCode);
+//	}
+	
+
+	@When("user click on Hubspot Login")
+	public void user_click_on_hubspot_login() throws InterruptedException {
+		Thread.sleep(7000);
+		pom3.getLeadsPage().getClickHubspotLogin().click();
+	
+	}
+	
+
+	@When("user click on Three Lead")
+	public void user_click_on_three_lead() throws InterruptedException {
+		Thread.sleep(7000);
+		pom3.getLeadsPage().getClickCheckBox().click();
+		Thread.sleep(7000);
+		pom3.getLeadsPage().getClickSecondCheckBox().click();
+		Thread.sleep(7000);
+		pom3.getLeadsPage().getClickThreadCheckBox().click();
+
+	
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
 
 	  
 

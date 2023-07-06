@@ -14,7 +14,6 @@ Feature: Verifying Yujj SignIn Functionality
     Examples: 
       | email                     | password   |
       | ashapriyait0201@gmail.com | Abcdefg$12 |
-      
 
   @PersonalSignUp
   Scenario Outline: Verifying SignUp functionality for Persional SignIn Page
@@ -24,15 +23,17 @@ Feature: Verifying Yujj SignIn Functionality
     And user click the By signing up, you agreed with terms & condition
     And user click the SignUp button
     And user click One more pop up should open with Yes and edit button should be there and click on Yes button
-    Then Verify after Email already exists, Please try a different one pop-up should be there
+    And user click the three dots
+    And user click the Signout
+    Then Sign in to your account page is displayed
 
     Examples: 
-      | First Name | Last Name | Work Email                 | New Password    | Confirm Password |
-      | Ashapriya  | R         | ashapriya@ptscservices.com | Ashapriya12pts$ | Ashapriya12pts$  |
+      | First Name | Last Name | Work Email            | New Password    | Confirm Password |
+      | Vanthana   | A         | vanthana567@gmail.com | Ashapriya12pts$ | Ashapriya12pts$  |
 
   @CompanySignUP
   Scenario Outline: Verifying SignUp functionality for Company SignUp
-    And user click the company Sign up here
+    And user click the Sign up here
     And user click the Company SignUp radio button
     And user enters company signup "<First Name>" and "<Last Name>" and "<Work Email>" and "<New Password>" and "<Confirm Password>"
     And user click the By company signing up, you agreed with terms & condition
@@ -42,4 +43,4 @@ Feature: Verifying Yujj SignIn Functionality
 
     Examples: 
       | First Name | Last Name | Work Email        | New Password | Confirm Password |
-      | Achu       | Aadhu     | achu234@gmail.com | Abcdefg$12   | Abcdefg$12       |
+      | lkjjh      | hh        | lkjjk44@gmail.com | Abcdefg$12   | Abcdefg$12       |
