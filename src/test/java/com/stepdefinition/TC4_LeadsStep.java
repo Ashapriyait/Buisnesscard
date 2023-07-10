@@ -8,13 +8,40 @@ import org.openqa.selenium.WebDriver;
 import com.base.BaseClass;
 import com.manager.PageObjectManager;
 
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class TC6_LeadsStep extends BaseClass {
+public class TC4_LeadsStep extends BaseClass {
 	
 	//WebDriver driver;
 	PageObjectManager pom3=new PageObjectManager();
 	String parent;
+
+	@When("user click on Add Lead")
+	public void user_click_on_add_lead() throws InterruptedException {
+		Thread.sleep(1000);
+		pom3.getLeadsPage().getClickAddLead().click();
+	
+	}
+	@When("user enters {string} and {string} and {string} and {string} and {string} and {string}")
+	public void user_enters_and_and_and_and_and(String FirstName, String LastName, String Email, String PhoneNumber, String CompanyName, String Address) {
+		pom3.getLeadsPage().getTxtFirstName().sendKeys(FirstName);
+		pom3.getLeadsPage().getTxtLastName().sendKeys(LastName);
+		pom3.getLeadsPage(). getTxtEmail().sendKeys(Email);
+		pom3.getLeadsPage().getTxtPhoneNumber().sendKeys(PhoneNumber);
+		pom3.getLeadsPage().getTxtCompanyName().sendKeys(CompanyName);
+		pom3.getLeadsPage().getTxtAddress().sendKeys(Address);
+	
+	}
+	@Then("user should after Verifying SuccessMessage is Displayed")
+	public void user_should_after_verifying_success_message_is_displayed() throws InterruptedException {
+		System.out.println("Verifying Contact Detaile Save Successfully");
+		
+	
+	}
+
+
+
 	
 	@When("user click on three dots")
 	public void user_click_on_three_dots() throws InterruptedException {
@@ -88,7 +115,7 @@ public class TC6_LeadsStep extends BaseClass {
 
 	@When("user click on Dont show this again CheckBox")
 	public void user_click_on_dont_show_this_again_check_box() throws InterruptedException {
-		Thread.sleep(10000);
+		Thread.sleep(11000);
 		pom3.getLeadsPage().getDontshowthisagainCheckBox().click();
 	}
 	@When("user click on Yes button")
@@ -108,7 +135,7 @@ public class TC6_LeadsStep extends BaseClass {
 	}
 	@When("user click on Save button")
 	public void user_click_on_save_button() throws InterruptedException {
-		Thread.sleep(7000);
+		Thread.sleep(9000);
 		 pom3.getLeadsPage().getClickSaveButton().click();
 	}
 	

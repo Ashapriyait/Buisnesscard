@@ -1,6 +1,6 @@
 @SignInPage
 Feature: Verifying Yujj SignIn Functionality
-
+@LoginPage
   Scenario Outline: Verifying SignIn functionality for Valid email and valid password
     Given user is on Yujj SignIn page
     When user enters "<email>" and "<password>"
@@ -12,11 +12,12 @@ Feature: Verifying Yujj SignIn Functionality
     Then Sign in to your account page is displayed
 
     Examples: 
-      | email                     | password   |
-      | ashapriyait0201@gmail.com | Abcdefg$12 |
+      | email                     | password     |
+      | ashapriyait0201@gmail.com | Ashamano@123 |
 
   @PersonalSignUp
   Scenario Outline: Verifying SignUp functionality for Persional SignIn Page
+   Given user is on Yujj SignIn page
     When user click the Sign up here
     When user click the Persional SignUp radio button
     And user enters "<First Name>" and "<Last Name>" and "<Work Email>" and "<New Password>" and "<Confirm Password>"
@@ -33,7 +34,8 @@ Feature: Verifying Yujj SignIn Functionality
 
   @CompanySignUP
   Scenario Outline: Verifying SignUp functionality for Company SignUp
-    And user click the Sign up here
+   Given user is on Yujj SignIn page
+    When user click the Sign up here
     And user click the Company SignUp radio button
     And user enters company signup "<First Name>" and "<Last Name>" and "<Work Email>" and "<New Password>" and "<Confirm Password>"
     And user click the By company signing up, you agreed with terms & condition
@@ -43,4 +45,17 @@ Feature: Verifying Yujj SignIn Functionality
 
     Examples: 
       | First Name | Last Name | Work Email        | New Password | Confirm Password |
-      | lkjjh      | hh        | lkjjk44@gmail.com | Abcdefg$12   | Abcdefg$12       |
+      | Aishu      | V        | lkjjk44@gmail.com | Abcdefg$12   | Abcdefg$12       |
+
+      
+ @UserRegisterCameraIcon
+  Scenario Outline: Verifying SignUp functionality for user Register of CameraIcon
+   Given user is on Yujj SignIn page
+   When user click the Sign up here
+   And user click on Camera Icon
+   And user Upload the file
+   
+   
+   
+ 
+ 

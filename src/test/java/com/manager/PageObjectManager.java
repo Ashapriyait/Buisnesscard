@@ -2,10 +2,13 @@ package com.manager;
 
 import com.base.BaseClass;
 import com.pages.AddContactPage;
+import com.pages.CompanyDirectoryPage;
 import com.pages.CompanySignUpPage;
+import com.pages.ForgetPasswordPage;
 import com.pages.LeadsPage;
 import com.pages.PersionalSignUpPage;
 import com.pages.SigninPage;
+import com.pages.SystemPreferencePage;
 import com.pages.UpdateAndEditPage;
 
 public class PageObjectManager extends BaseClass {
@@ -16,10 +19,27 @@ public class PageObjectManager extends BaseClass {
 	private UpdateAndEditPage updateAndEditPage;
 	private AddContactPage addContactPage;
 	private LeadsPage leadsPage;
+	private SystemPreferencePage systemPreferencePage;
+	private ForgetPasswordPage forgetPasswordPage;
+	private CompanyDirectoryPage companyDirectoryPage;
 	
 	
 	
 	
+	
+
+	public CompanyDirectoryPage getCompanyDirectoryPage() {
+		return (companyDirectoryPage==null)?companyDirectoryPage=new CompanyDirectoryPage():companyDirectoryPage;
+	}
+
+	public ForgetPasswordPage getForgetPasswordPag() {
+		return (forgetPasswordPage==null)?forgetPasswordPage=new ForgetPasswordPage():forgetPasswordPage;
+	}
+
+	public SystemPreferencePage getSystemPreferencePage() {
+		return (systemPreferencePage==null)?systemPreferencePage=new SystemPreferencePage():systemPreferencePage;
+	}
+
 	public LeadsPage getLeadsPage() {
 		return (leadsPage==null)?leadsPage=new LeadsPage():leadsPage; 
 	}

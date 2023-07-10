@@ -16,5 +16,5 @@ Feature: Verifiying Yujj Edit CardPage
     Then user shold be Verifing Updating SuccessMessage
 
     Examples: 
-      | email                     | password   | PhoneType | Numbers    | FirstName | LastName | SocialNetworkType | URL                        | AccessRole    |
-      | ashapriyait0201@gmail.com | Abcdefg$12 | Mobile    | 8667792850 | Julee     | V        | Instagram         | https://www.Instagram.com/ | ProfileViewer |
+      | email                     | password     | PhoneType | Numbers    | FirstName | LastName | SocialNetworkType | URL                        | AccessRole    |
+      | ashapriyait0201@gmail.com | Ashamano@123 | Mobile    | 8667792850 | Julee     | V        | Instagram         | https://www.Instagram.com/ | ProfileViewer |

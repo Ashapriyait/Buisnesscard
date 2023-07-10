@@ -34,8 +34,9 @@ public class UpdateAndEditPage extends BaseClass{
  @FindBy(id="mat-select-value-11")
  private WebElement clickPhoneType;
  
- @FindBy(id="mat-option-51")
+ @FindBy(xpath="(//span[@class=\"mat-option-text\"])[3]")
  private WebElement clickWork;
+ 
  
  @FindBy(xpath="//div[@class=\"mat-form-field-infix ng-tns-c67-39\"]//input[@id=\"number\"]")
  private WebElement txtPhnNo;

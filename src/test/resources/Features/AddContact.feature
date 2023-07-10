@@ -16,8 +16,8 @@ Feature: Verifiying the AddContact page of Yujj BusinessCard
     Then user Verify after created Contact Added uccessfully message id displayed
 
     Examples: 
-      | email                     | password   | JobTittle  | Email           | FirstName | LastName | PhoneType | Number     | SocialNetworkType | URL          | ReportingManager | AccessRole   |
-      | ashapriyait0201@gmail.com | Abcdefg$12 | QA Analyst | ccc23@gmail.com | CCCCC     | R        | Mobile    | 9876543211 | Facebook          | facebook.com | Himself          | ProfileAdmin |
+      | email                     | password     | JobTittle  | Email           | FirstName | LastName | PhoneType | Number     | SocialNetworkType | URL          | ReportingManager | AccessRole   |
+      | ashapriyait0201@gmail.com | Ashamano@123 | QA Analyst | ccc23@gmail.com | CCCCC     | R        | Mobile    | 9876543211 | Facebook          | facebook.com | Himself          | ProfileAdmin |
 
   @Ringcentral
   Scenario Outline: Verifiying the AddContact Page of call on RingCentral
@@ -35,8 +35,8 @@ Feature: Verifiying the AddContact page of Yujj BusinessCard
     And user click on any Contact Number
 
     Examples: 
-      | email                     | password   | JobTittle  | Email            | FirstName | LastName | PhoneType | Number     | SocialNetworkType | URL          | ReportingManager | AccessRole   |
-      | ashapriyait0201@gmail.com | Abcdefg$12 | QA Analyst | kkk123@gmail.com | KKK       | M        | Mobile    | 7010203254 | Facebook          | facebook.com | Himself          | ProfileAdmin |
+      | email                     | password     | JobTittle  | Email            | FirstName | LastName | PhoneType | Number     | SocialNetworkType | URL          | ReportingManager | AccessRole   |
+      | ashapriyait0201@gmail.com | Ashamano@123 | QA Analyst | kkk123@gmail.com | KKK       | M        | Mobile    | 7010203254 | Facebook          | facebook.com | Himself          | ProfileAdmin |
 
   @Call
   Scenario Outline: Verifiying the AddContact Page of call on CallLogo
@@ -54,8 +54,8 @@ Feature: Verifiying the AddContact page of Yujj BusinessCard
     And user click on Callany Contact Number
 
     Examples: 
-      | email                     | password   | JobTittle  | Email            | FirstName | LastName | PhoneType | Number     | SocialNetworkType | URL          | ReportingManager | AccessRole   |
-      | ashapriyait0201@gmail.com | Abcdefg$12 | QA Analyst | vvv123@gmail.com | HHHHHS    | N        | Mobile    | 7010203254 | Facebook          | facebook.com | Himself          | ProfileAdmin |
+      | email                     | password     | JobTittle  | Email            | FirstName | LastName | PhoneType | Number     | SocialNetworkType | URL          | ReportingManager | AccessRole   |
+      | ashapriyait0201@gmail.com | Ashamano@123 | QA Analyst | vvv123@gmail.com | HHHHHS    | N        | Mobile    | 7010203254 | Facebook          | facebook.com | Himself          | ProfileAdmin |
 
   @Teams
   Scenario Outline: Verifiying the AddContact Page of call on TeamsLogo
@@ -72,5 +72,5 @@ Feature: Verifiying the AddContact page of Yujj BusinessCard
     And user click on Teams logo
 
     Examples: 
-      | email                     | password   | JobTittle  | Email             | FirstName | LastName | PhoneType | Number     | SocialNetworkType | URL          | ReportingManager | AccessRole   |
-      | ashapriyait0201@gmail.com | Abcdefg$12 | QA Analyst | pppp123@gmail.com | PPPP      | M        | Mobile    | 7010203254 | Facebook          | facebook.com | Himself          | ProfileAdmin |
+      | email                     | password     | JobTittle  | Email             | FirstName | LastName | PhoneType | Number     | SocialNetworkType | URL          | ReportingManager | AccessRole   |
+      | ashapriyait0201@gmail.com | Ashamano@123 | QA Analyst | pppp123@gmail.com | PPPP      | M        | Mobile    | 7010203254 | Facebook          | facebook.com | Himself          | ProfileAdmin |

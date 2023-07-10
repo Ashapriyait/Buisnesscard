@@ -16,7 +16,7 @@ public class TC3_AddContactStep extends BaseClass{
 	
 	@When("user click the Notification button")
      public void user_click_the_notification_button() throws InterruptedException {
-		Thread.sleep(10000);
+		Thread.sleep(11000);
 		//driver.findElement(By.xpath("//i[@id=\"togglesidebaricon\"]")).click();
 	   pom1.getAddContactPage().getClickNotification().click();
     }

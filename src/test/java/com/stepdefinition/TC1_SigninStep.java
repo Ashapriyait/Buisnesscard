@@ -166,6 +166,16 @@ public class TC1_SigninStep extends BaseClass{
 	}
 
 
+	@When("user click on Camera Icon")
+	public void user_click_on_camera_icon() throws InterruptedException {
+		Thread.sleep(3000);
+		pom.getCompanySignUpPage().getClickCameraIcon().click();
+	
+	}
+
+
+
+
 
 	
 

@@ -1,4 +1,24 @@
+@Leads
 Feature: Verifiying the Leads page of Yujj BusinessCard
+
+  @AddLead
+  Scenario Outline: Verifying Add lead Details
+    Given user is on Yujj SignIn page
+    When user enters "<email>" and "<password>"
+    And user click the Remember Me box
+    And user click the SignIn button
+    And user click the Notification button
+    And user click on Company/AdminProfile button
+    And user click on three dots
+    And user click on Leads Icon
+    And user click on Add Lead
+    And user enters "<FirstName>" and "<LastName>" and "<Email>" and "<PhoneNumber>" and "<CompanyName>" and "<Address>"
+    And user click on Save button
+    Then user should after Verifying SuccessMessage is Displayed
+
+    Examples: 
+      | email              | password   | FirstName | LastName | Email            | PhoneNumber | CompanyName | Address |
+      | ashapriyait0201@gmail.com | Ashamano@123 | Arjun     | M        | arjun1@gmail.com |  9876543210 | ABC         | Kerala  |
 
   @SaveDriveLogo
   Scenario Outline: Verifying Single lead saving to one drive Details
@@ -25,7 +45,7 @@ Feature: Verifiying the Leads page of Yujj BusinessCard
 
     Examples: 
       | email                     | password   | EmailPhoneorSkype          | Username            | Password   |
-      | ashapriyait0201@gmail.com | Abcdefg$12 | ashapriya@ptscservices.com | ashapriya@pts.local | Suite@595$ |
+      | ashapriyait0201@gmail.com | Ashamano@123 | ashapriya@ptscservices.com | ashapriya@pts.local | Suite@595$ |
 
   @SaveOutLookLogo
   Scenario Outline: Verifying Single lead saving to one drive Details
@@ -50,7 +70,7 @@ Feature: Verifiying the Leads page of Yujj BusinessCard
 
     Examples: 
       | email                     | password   | EmailPhoneorSkype          | Username            | Password   |
-      | ashapriyait0201@gmail.com | Abcdefg$12 | ashapriya@ptscservices.com | ashapriya@pts.local | Suite@595$ |
+      | ashapriyait0201@gmail.com | Ashamano@123 | ashapriya@ptscservices.com | ashapriya@pts.local | Suite@595$ |
 
   @SaveHubSpotLogo
   Scenario Outline: Verifying Single lead saving to one drive Details
@@ -70,7 +90,7 @@ Feature: Verifiying the Leads page of Yujj BusinessCard
 
     Examples: 
       | email                     | password   | Username                   | Password   |
-      | ashapriyait0201@gmail.com | Abcdefg$12 | ashapriya@ptscservices.com | Suite@595$ |
+      | ashapriyait0201@gmail.com | Ashamano@123| ashapriya@ptscservices.com | Suite@595$ |
 
   @SaveMultipleLeadDriver
   Scenario Outline: Verifying Multiple lead saving to one drive Details
@@ -94,17 +114,14 @@ Feature: Verifiying the Leads page of Yujj BusinessCard
     And user click on Yes button
     And user click on Any folder and click on Microsoft Teams Chat Files
     And user click on Save button
-    
-    
-    
 
-   Examples: 
+    Examples: 
       | email                     | password   | EmailPhoneorSkype          | Username            | Password   |
-      | ashapriyait0201@gmail.com | Abcdefg$12 | ashapriya@ptscservices.com | ashapriya@pts.local | Suite@595$ |
+      | ashapriyait0201@gmail.com | Ashamano@123 | ashapriya@ptscservices.com | ashapriya@pts.local | Suite@595$ |
 
   @SaveMultipleLeadOutLook
   Scenario Outline: Verifying Multiple lead saving to Outlook Details
-   Given user is on Yujj SignIn page
+    Given user is on Yujj SignIn page
     When user enters "<email>" and "<password>"
     And user click the Remember Me box
     And user click the SignIn button
@@ -125,8 +142,8 @@ Feature: Verifiying the Leads page of Yujj BusinessCard
 
     Examples: 
       | email                     | password   | EmailPhoneorSkype          | Username            | Password   |
-      | ashapriyait0201@gmail.com | Abcdefg$12 | ashapriya@ptscservices.com | ashapriya@pts.local | Suite@595$ |
-  
+      | ashapriyait0201@gmail.com | Ashamano@123 | ashapriya@ptscservices.com | ashapriya@pts.local | Suite@595$ |
+
   @SaveMultipleHubSpotLogo
   Scenario Outline: Verifying Multiple lead saving to Hupspot Details
     Given user is on Yujj SignIn page
@@ -145,5 +162,4 @@ Feature: Verifiying the Leads page of Yujj BusinessCard
 
     Examples: 
       | email                     | password   | Username                   | Password   |
-      | ashapriyait0201@gmail.com | Abcdefg$12 | ashapriya@ptscservices.com | Suite@595$ |
-  
+      | ashapriyait0201@gmail.com | Ashamano@123 | ashapriya@ptscservices.com | Suite@595$ |

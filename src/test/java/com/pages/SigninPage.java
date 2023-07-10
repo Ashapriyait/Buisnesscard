@@ -36,7 +36,7 @@ public class SigninPage extends BaseClass{
 	
 	@FindBy(xpath="//h1[text()='Sign in to your account.']")
 	private WebElement siginPageMessage;
-
+	
 	public WebElement getSiginPageMessage() {
 		return siginPageMessage;
 	}

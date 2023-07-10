@@ -60,6 +60,16 @@ public WebElement getClickSignUpHere() {
 	return clickSignUpHere;
 }
 
+
+@FindBy(xpath="//i[@class=\"pi pi-camera blue_circle\"]")
+private WebElement clickCameraIcon;
+
+
+public WebElement getClickCameraIcon() {
+	return clickCameraIcon;
+}
+
+
 public WebElement getRatiobtnClick() {
 	return ratiobtnClick;
 }

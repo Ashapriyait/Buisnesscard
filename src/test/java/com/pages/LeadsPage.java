@@ -12,6 +12,59 @@ public class LeadsPage extends BaseClass {
 		PageFactory.initElements(driver, this);
 	}
 	
+	@FindBy(xpath="//i[@class=\"pi pi-user-plus\"]")
+	private WebElement clickAddLead;
+	
+	@FindBy(id="firstName")
+	private WebElement txtFirstName;
+	
+	@FindBy(id="lastName")
+	private WebElement txtLastName;
+	
+	@FindBy(id="email")
+	private WebElement txtEmail;
+	
+	@FindBy(id="phoneNumber")
+	private WebElement txtPhoneNumber;
+	
+	@FindBy(id="companyName")
+	private WebElement txtCompanyName;
+	
+	@FindBy(id="address")
+	private WebElement txtAddress;
+	
+	
+	
+	
+
+	public WebElement getClickAddLead() {
+		return clickAddLead;
+	}
+
+	public WebElement getTxtFirstName() {
+		return txtFirstName;
+	}
+
+	public WebElement getTxtLastName() {
+		return txtLastName;
+	}
+
+	public WebElement getTxtEmail() {
+		return txtEmail;
+	}
+
+	public WebElement getTxtPhoneNumber() {
+		return txtPhoneNumber;
+	}
+
+	public WebElement getTxtCompanyName() {
+		return txtCompanyName;
+	}
+
+	public WebElement getTxtAddress() {
+		return txtAddress;
+	}
+
 	@FindBy(xpath="//i[@class=\"pi pi-ellipsis-h\"]")
 	private WebElement clickThreeDots;
 	
@@ -24,7 +77,7 @@ public class LeadsPage extends BaseClass {
 	@FindBy(xpath="//li[text()=' Microsoft Teams Chat Files ']")
 	private WebElement clickMicrosoftChatFile;
 	
-	@FindBy(xpath="//button[text()='Save']")
+	@FindBy(xpath="(//button[@class=\"saveLead\"])[1]")
 	private WebElement clickSaveButton;
 	
 	@FindBy(xpath="//i[@class=\"pi pi-users\"]")
