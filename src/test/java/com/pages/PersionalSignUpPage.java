@@ -13,12 +13,15 @@ public class PersionalSignUpPage extends BaseClass{
 	}
 	
 	
+	@FindBy(xpath="//button[text()='Yes']")
+	private WebElement clickYesBtnElement;
 	
 	
+
 	@FindBy(xpath="//span[text()='Sign up here']")
 	private WebElement clickSignUpHere;
 	
-	@FindBy(id="toast-container")
+	@FindBy(xpath="//div[@class=\"ng-tns-c46-13 toast-message ng-star-inserted\"]")
 	private WebElement actEnterAllFields;
 
 	@FindBy(id="personal")
@@ -39,8 +42,8 @@ public class PersionalSignUpPage extends BaseClass{
 	@FindBy(id="new")
 	private WebElement txtConfirmPassword;
 	
-	@FindBy(name="myagreement")
-	private WebElement checkboxClick;
+	@FindBy(xpath="//span[@class=\"mat-checkbox-inner-container mat-checkbox-inner-container-no-side-margin\"]")
+	private WebElement clickCheckBox;
 	
 	@FindBy(xpath="//button[text()='Sign up']")
 	private WebElement signUpbtnClick;
@@ -61,7 +64,10 @@ public class PersionalSignUpPage extends BaseClass{
 	@FindBy(xpath="//button[text()=' Back ' ]")
 	private WebElement clickBackbutton;
 
-	
+	public WebElement getClickYesBtnElement() {
+		return clickYesBtnElement;
+	}
+
 	public WebElement getClickBackbutton() {
 		return clickBackbutton;
 	}
@@ -118,8 +124,8 @@ public class PersionalSignUpPage extends BaseClass{
 		return txtConfirmPassword;
 	}
 
-	public WebElement getCheckboxClick() {
-		return checkboxClick;
+	public WebElement getclickCheckBox() {
+		return clickCheckBox;
 	}
 
 	public WebElement getBtnClick() {

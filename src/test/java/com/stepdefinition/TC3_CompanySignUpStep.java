@@ -1,55 +1,66 @@
 package com.stepdefinition;
 
-import java.io.IOException;
-import java.time.Duration;
-
 import com.base.BaseClass;
-import com.manager.PageObjectManager;
 
 import io.cucumber.java.en.When;
 
 public class TC3_CompanySignUpStep extends BaseClass {
-	PageObjectManager pom=new PageObjectManager();
 	
 
-	@When("user click the Company SignUp radio button")
-	public void user_click_the_company_sign_up_radio_button() {
-		
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
-		pom.getCompanySignUpPage().getRatiobtnClick().click();
-
-	
+	@When("User click the Company SignUp radio button")
+	public void userClickTheCompanySignUpRadioButton() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+	@When("user Enter only numbers in Company Signup First name and Last name")
+	public void userEnterOnlyNumbersInCompanySignupFirstNameAndLastName() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+	@When("User Enter only special characters in Company Signup First name and Last name")
+	public void userEnterOnlySpecialCharactersInCompanySignupFirstNameAndLastName() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+	@When("User Enter Company Signup Valid First name and Valid LastName and Invalid Work Email")
+	public void userEnterCompanySignupValidFirstNameAndValidLastNameAndInvalidWorkEmail() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+	@When("User enters Company Signup Valid Firstname and Valid Lastname and Valid Email")
+	public void userEntersCompanySignupValidFirstnameAndValidLastnameAndValidEmail() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+	@When("User Enters Company Signup Valid Firstname and Valid Lastname and Valid Email and Valid NewPassword")
+	public void userEntersCompanySignupValidFirstnameAndValidLastnameAndValidEmailAndValidNewPassword() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+	@When("User Enters Company Signup Valid Firstname and Valid Lastname and Valid Email and Valid NewPassword and Invalid ConfirmPassword")
+	public void userEntersCompanySignupValidFirstnameAndValidLastnameAndValidEmailAndValidNewPasswordAndInvalidConfirmPassword() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+	@When("User Enters Company Signup Valid Firstname and Valid Lastname and Valid Email and Valid NewPassword and valid ConfirmPassword")
+	public void userEntersCompanySignupValidFirstnameAndValidLastnameAndValidEmailAndValidNewPasswordAndValidConfirmPassword() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
 	}
 
-	@When("user enters Company First Name and Last Name and Work Email and New Password and Confirm Password")
-	public void user_enters_company_first_name_and_last_name_and_work_email_and_new_password_and_confirm_password() throws IOException {
-		pom.getCompanySignUpPage().getTxtFirstName().sendKeys(getData("LogIn",2,2));
-		pom.getCompanySignUpPage().getTxtLastName().sendKeys(getData("LogIn",2,3));
-		pom.getCompanySignUpPage().getTxtEmail().sendKeys(getData("LogIn",2,4));
-		pom.getCompanySignUpPage().getTxtNewPassword().sendKeys(getData("LogIn",2,5));
-		pom.getCompanySignUpPage().getTxtConfirmPassword().sendKeys(getData("LogIn",2,6));
-		
-	}
+
+
 	
-
-	@When("user enters Company First Name and Last Name and Work Email and Valid New Password and InValid Confirm Password")
-	public void user_enters_company_first_name_and_last_name_and_work_email_and_valid_new_password_and_in_valid_confirm_password() throws IOException {
-		pom.getCompanySignUpPage().getTxtFirstName().sendKeys(getData("LogIn",2,2));
-		pom.getCompanySignUpPage().getTxtLastName().sendKeys(getData("LogIn",2,3));
-		pom.getCompanySignUpPage().getTxtEmail().sendKeys(getData("LogIn",2,4));
-		pom.getCompanySignUpPage().getTxtNewPassword().sendKeys(getData("LogIn",2,5));
-		pom.getCompanySignUpPage().getTxtConfirmPassword().sendKeys(getData("LogIn",1,7));
-	
-	
-	}
-
-
-
-
-
-
-
-
-
-
 }
+
+	
+
+
+
+
+
+	
+
+
+
+

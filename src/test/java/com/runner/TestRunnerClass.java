@@ -13,10 +13,10 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 import io.cucumber.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features="C:\\Users\\Ashapriya_PTS\\eclipse-workspace\\YUJJCard\\src\\test\\resources\\Features",
+@CucumberOptions(features="C:\\Users\\Ashapriya_PTS\\New Yujj\\YUJJCard\\src\\test\\resources\\Features",
 dryRun=false,
 glue="com.stepdefinition",
-tags="@LogInPage",
+tags="@CompanySignUp",
 stepNotifications=true,
 monochrome=true,
 snippets=SnippetType.CAMELCASE,

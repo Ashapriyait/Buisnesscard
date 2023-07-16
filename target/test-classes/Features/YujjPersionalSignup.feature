@@ -29,12 +29,10 @@ Feature: Verifying Yujj UserRegister SignUp Functionality
     When User Enters Valid Firstname and Valid Lastname and Valid Email and Valid NewPassword and Invalid ConfirmPassword
     And user click the Chechbox By signing up, you agreed with terms & condition
     And User click on SignUp button
-    Then User Should Verify after InValid Password error message should come " Password did not match or password did not match pattern "
+    Then User Should Verify after InValid Password error message should come "Password did not match or password did not match pattern"
     When User Enters Valid Firstname and Valid Lastname and Valid Email and Valid NewPassword and valid ConfirmPassword
-    And User click on SignUp button
     Then User Should Verify after error message should come "You must agree to terms and condition"
     When User Enters Valid Firstname and Valid Lastname and Valid Email and Valid NewPassword and valid ConfirmPassword
-    And user click the Chechbox By signing up, you agreed with terms & condition
     And User click on SignUp button
     And user click One more pop up should open with Yes and edit button should be there and click on Yes button
     Then User Should Verify after Successfully YujjCard Page is displayed "AR R"

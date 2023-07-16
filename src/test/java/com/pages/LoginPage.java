@@ -48,8 +48,24 @@ public class LoginPage extends BaseClass{
 	@FindBy(xpath="//h1[text()='Sign in to your account.']")
 	private WebElement ActsiginPageMessage;
 	
+	@FindBy(xpath="//mat-icon[text()='visibility_off']")
+	private WebElement clickEyeIconElement;
 	
+	@FindBy(xpath=" //div[text()=' Unable to login. Please try again ']")
+	private WebElement actAnabletoLoginMessagElement;
 	
+	public WebElement getActAnabletoLoginMessagElement() {
+		return actAnabletoLoginMessagElement;
+	}
+
+	public WebElement getActsiginPageMessage() {
+		return ActsiginPageMessage;
+	}
+
+	public WebElement getClickEyeIconElement() {
+		return clickEyeIconElement;
+	}
+
 	public WebElement getActCardName() {
 		return actCardName;
 	}

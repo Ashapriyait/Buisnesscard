@@ -83,6 +83,20 @@ public class TC1_LogInStep extends BaseClass {
          pom.getLoginInPage().getTxtPassword().sendKeys(getData("LogIn",2,1));
 	}
 	
+	//RememberMe
+
+	@Then("user Verify after should error message is displayed {string}")
+	public void userVerifyAfterShouldErrorMessageIsDisplayed(String expAnabletoLoginMessagElement) {
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+		String ActAnabletoLoginMessagElement = pom.getLoginInPage().getActAnabletoLoginMessagElement().getText();
+		Assert.assertEquals("Sign in to your account.",expAnabletoLoginMessagElement,ActAnabletoLoginMessagElement);
+
+	
+	}
+
+
+
+	
 	//ValidLogin
 	
 
@@ -107,20 +121,43 @@ public class TC1_LogInStep extends BaseClass {
 
 	
 	}
+	
 
+	@When("user click on Eye Icon")
+	public void userClickOnEyeIcon() {
+		pom.getLoginInPage().getClickEyeIconElement().click();
 
+	}
+	
+	//ForgetPassword
+	
+	@When("user should click on Forget Password")
+	public void userShouldClickOnForgetPassword() {
+		pom.getForgetPasswordPage().getClickForgetPassword().click();
 
+	}
+	@When("user should enters Email")
+	public void userShouldEntersEmail() throws IOException, InterruptedException {
+		pom.getForgetPasswordPage().getTxtEmailAddress().sendKeys(getData("LogIn",3,0));
 
+	}
+	@When("user should click on ResetPassword")
+	public void userShouldClickOnResetPassword() {
+		pom.getForgetPasswordPage().getClickResetPassword().click();
+	}
 
+	@Then("user should Verifying Message is Displayed {string}")
+	public void userShouldVerifyingMessageIsDisplayed(String expActMessagElement) {
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+		String ActMessagElement = pom.getForgetPasswordPage().getActMessagElement().getText();
+		Assert.assertEquals("Sign in to your account.",expActMessagElement,ActMessagElement);
 
-
-
-
-
-
+	
+	}
 
 
 
 	
+    
 
 }

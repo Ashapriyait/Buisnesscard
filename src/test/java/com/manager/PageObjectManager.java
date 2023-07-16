@@ -32,7 +32,7 @@ public class PageObjectManager extends BaseClass {
 		return (companyDirectoryPage==null)?companyDirectoryPage=new CompanyDirectoryPage():companyDirectoryPage;
 	}
 
-	public ForgetPasswordPage getForgetPasswordPag() {
+	public ForgetPasswordPage getForgetPasswordPage() {
 		return (forgetPasswordPage==null)?forgetPasswordPage=new ForgetPasswordPage():forgetPasswordPage;
 	}
 

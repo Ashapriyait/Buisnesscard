@@ -24,6 +24,13 @@ public class ForgetPasswordPage extends BaseClass{
 	
 	@FindBy(id="password")
 	private WebElement txtResettedPassword;
+	
+	@FindBy(id="toast-container")
+	private WebElement actMessagElement;
+
+	public WebElement getActMessagElement() {
+		return actMessagElement;
+	}
 
 	public WebElement getTxtEmail() {
 		return txtEmail;
