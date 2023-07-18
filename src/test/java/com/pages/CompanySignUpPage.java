@@ -18,7 +18,7 @@ public class CompanySignUpPage extends BaseClass {
 	private WebElement clickSignUpHere;
  
  @FindBy(id="company")
-	private  WebElement ratiobtnClick;
+	private  WebElement clickRatiobtn;
  
  @FindBy(id="firstname")
 	private WebElement txtFirstName;
@@ -28,15 +28,25 @@ public class CompanySignUpPage extends BaseClass {
 	
  @FindBy(id="email1")
 	private WebElement txtEmail;
+
+ @FindBy(id="email")
+	private WebElement txtUseremail;
+ 
+ 
+
+@FindBy(id="password")
+    private WebElement txtUserPassword;
 	
- @FindBy(id="pass1")
+ 
+
+@FindBy(id="pass1")
 	private WebElement txtNewPassword;
 	
  @FindBy(id="new")
 	private WebElement txtConfirmPassword;
 	
- @FindBy(name="myagreement")
-	private WebElement checkboxClick;
+ @FindBy(xpath="//span[@class=\"mat-checkbox-inner-container mat-checkbox-inner-container-no-side-margin\"]")
+	private WebElement clickCheckBox;
 	
  @FindBy(xpath="//button[text()='Sign up']")
 	private WebElement signUpbtnClick;
@@ -46,6 +56,150 @@ public class CompanySignUpPage extends BaseClass {
  
  @FindBy(xpath="//h1[text()=' Welcome ']")
 	private WebElement message;
+ 
+ @FindBy(xpath="//i[@class=\"pi pi-camera blue_circle\"]")
+ private WebElement clickCameraIcon;
+ 
+ @FindBy(xpath="//h2[text()='AR R']")
+ private WebElement actCardName;
+ 
+ @FindBy(xpath="//input[@id='photo']")
+ private WebElement fileUpload;
+ 
+ @FindBy(xpath="//div[@id='toast-container']")
+ private WebElement actSuccessUpload;
+ 
+ @FindBy(xpath="//div[text()='Email already exists, Please try a different one'")
+ private WebElement actErrorMsg;
+ 
+ @FindBy(id="companyName")
+	private WebElement txtCompanyName;
+	
+	@FindBy(id="email")
+	private WebElement txtCompanyWebsite;
+	
+	@FindBy(id="address")
+	private WebElement txtAddress;
+	
+	@FindBy(id="country")
+	private WebElement clickCountry;
+	
+	@FindBy(xpath="//span[text()=' Albania ']")
+	private WebElement clickAlbania;
+	
+	@FindBy(id="mat-select-value-3")
+	private WebElement clickState;
+	
+	@FindBy(xpath="(//span[@class=\"mat-option-text\"])[1]")
+	private WebElement clickBeratCountry;
+	
+	@FindBy(xpath="//div[@class=\"mat-form-field-infix ng-tns-c67-20\"]")
+	private WebElement clickCity;
+	
+	@FindBy(xpath="//span[text()='Birkhadem']")
+	private WebElement clickBirkhadem;
+
+	
+
+	@FindBy(xpath="//span[text()='A�n Defla']")
+	private WebElement clickAinDefla;
+	
+	@FindBy(id="confirm")
+	private WebElement txtZipcode;
+	
+	@FindBy(xpath=" //div[@class=\"filed col-12\"]")
+	private WebElement clickCreateBtn;
+	
+	@FindBy(xpath="//h1[text()='Create Company']")
+	private WebElement actCreateCompany;
+	
+	@FindBy(id="address")
+	private WebElement txtCompanyAddress;
+ 
+ public WebElement getTxtCompanyAddress() {
+		return txtCompanyAddress;
+	}
+
+public WebElement getActCreateCompany() {
+		return actCreateCompany;
+	}
+
+public WebElement getTxtCompanyName() {
+		return txtCompanyName;
+	}
+
+	public WebElement getTxtCompanyWebsite() {
+		return txtCompanyWebsite;
+	}
+
+	public WebElement getTxtAddress() {
+		return txtAddress;
+	}
+
+	public WebElement getClickCountry() {
+		return clickCountry;
+	}
+
+	public WebElement getClickAlbania() {
+		return clickAlbania;
+	}
+
+	public WebElement getClickState() {
+		return clickState;
+	}
+
+	public WebElement getClickBeratCountry() {
+		return clickBeratCountry;
+	}
+
+	public WebElement getClickCity() {
+		return clickCity;
+	}
+
+	public WebElement getClickBirkhadem() {
+		return clickBirkhadem;
+	}
+
+	public WebElement getClickAinDefla() {
+		return clickAinDefla;
+	}
+
+	public WebElement getTxtZipcode() {
+		return txtZipcode;
+	}
+
+	public WebElement getClickCreateBtn() {
+		return clickCreateBtn;
+	}
+
+public WebElement getActErrorMsg() {
+	return actErrorMsg;
+}
+
+public WebElement getActSuccessUpload() {
+	return actSuccessUpload;
+}
+
+public WebElement getTxtUserPassword() {
+	return txtUserPassword;
+}
+
+public WebElement getFileUpload() {
+	return fileUpload;
+}
+
+public WebElement getTxtUseremail() {
+		return txtUseremail;
+	}
+ 
+ public WebElement getActCardName() {
+	return actCardName;
+}
+
+
+public WebElement getTxtPassword() {
+		return txtUserPassword;
+	}
 
 
 public WebElement getMessage() {
@@ -61,17 +215,13 @@ public WebElement getClickSignUpHere() {
 }
 
 
-@FindBy(xpath="//i[@class=\"pi pi-camera blue_circle\"]")
-private WebElement clickCameraIcon;
-
-
 public WebElement getClickCameraIcon() {
 	return clickCameraIcon;
 }
 
 
 public WebElement getRatiobtnClick() {
-	return ratiobtnClick;
+	return clickRatiobtn;
 }
 
 public WebElement getTxtFirstName() {
@@ -94,8 +244,14 @@ public WebElement getTxtConfirmPassword() {
 	return txtConfirmPassword;
 }
 
-public WebElement getCheckboxClick() {
-	return checkboxClick;
+
+
+public WebElement getClickRatiobtn() {
+	return clickRatiobtn;
+}
+
+public WebElement getClickCheckBox() {
+	return clickCheckBox;
 }
 
 public WebElement getSignUpbtnClick() {

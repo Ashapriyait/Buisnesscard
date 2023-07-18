@@ -138,6 +138,7 @@ public class TC1_LogInStep extends BaseClass {
 	}
 	@When("user should enters Email")
 	public void userShouldEntersEmail() throws IOException, InterruptedException {
+		Thread.sleep(1000);
 		pom.getForgetPasswordPage().getTxtEmailAddress().sendKeys(getData("LogIn",3,0));
 
 	}
@@ -154,6 +155,35 @@ public class TC1_LogInStep extends BaseClass {
 
 	
 	}
+	
+
+	@When("user enters email and password")
+	public void userEntersEmailAndPassword() throws IOException {
+		pom.getLoginInPage().getTxtemail().sendKeys(getData("LogIn",1,0));
+		pom.getLoginInPage().getTxtPassword().sendKeys(getData("LogIn",1,1));
+		
+	}
+	@When("Welcome Yujj Card page is displayed")
+	public void welcomeYujjCardPageIsDisplayed() {
+
+	}
+	@When("user click the three dots")
+	public void userClickTheThreeDots() throws InterruptedException {
+		Thread.sleep(5000);
+		pom.getLoginInPage().getClickThreeDots().click();
+
+	}
+	@When("user click the Signout")
+	public void userClickTheSignout() throws InterruptedException {
+		Thread.sleep(5000);
+		pom.getLoginInPage().getClickSignOut().click();
+		
+
+	}
+	
+
+
+
 
 
 

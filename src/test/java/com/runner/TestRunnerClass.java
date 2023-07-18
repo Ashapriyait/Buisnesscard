@@ -6,6 +6,7 @@ import java.io.IOException;
 import org.junit.AfterClass;
 import org.junit.runner.RunWith;
 
+import com.base.BaseClass;
 import com.report.Reporting;
 
 import io.cucumber.junit.CucumberOptions;
@@ -16,21 +17,24 @@ import io.cucumber.junit.Cucumber;
 @CucumberOptions(features="C:\\Users\\Ashapriya_PTS\\New Yujj\\YUJJCard\\src\\test\\resources\\Features",
 dryRun=false,
 glue="com.stepdefinition",
-tags="@CompanySignUp",
+tags="@Asha",
 stepNotifications=true,
 monochrome=true,
 snippets=SnippetType.CAMELCASE,
-plugin= {"json:src/test/resorces/Yujj/Yujj.json"}
+plugin= {"pretty","json:target//index.json"}
 )
 
 
 
 
-public class TestRunnerClass {
+public class TestRunnerClass extends BaseClass {
 	@AfterClass
 	public static void afterClass() throws FileNotFoundException, IOException  {
-		Reporting.generateJVMReport("C:\\Users\\Ashapriya_PTS\\eclipse-workspace\\Yujj\\target\\output.json");
+		Reporting.generateJVMReport(getProjectPath()+getPropertyFileValue("jsonPath"));
 		
 	}
 
 }
+
+
+

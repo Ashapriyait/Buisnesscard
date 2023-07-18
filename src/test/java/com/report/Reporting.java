@@ -13,10 +13,10 @@ import net.masterthought.cucumber.ReportBuilder;
 public class Reporting extends BaseClass{
 	public static void generateJVMReport(String jsonFile ) throws FileNotFoundException, IOException {
 		//1. Mention the path of JVM report where to store?
-		File file=new File("C:\\Users\\Ashapriya_PTS\\eclipse-workspace\\Yujj\\target");
+		File file=new File(getProjectPath()+getPropertyFileValue("jvmPath"));
 		
 		//2.Create object for configuration class 
-		Configuration configuration=new Configuration(file,"Yujj");
+		Configuration configuration=new Configuration(file,"YujjCard");
 
 		//3.Pass the Browser ,Version,OS
 		configuration.addClassifications("Browser Name", "Chrome");

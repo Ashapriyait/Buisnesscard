@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.time.Duration;
 
 import org.junit.Assert;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 
 import com.base.BaseClass;
 import com.manager.PageObjectManager;
@@ -12,14 +14,19 @@ import com.manager.PageObjectManager;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class TC2_PersionalSignUpStep extends BaseClass{
 	PageObjectManager pom=new PageObjectManager();
 
 	@Given("User is on Yujj SignIn page")
 	public void userIsOnYujjSignInPage() throws FileNotFoundException, IOException {
-		GetDriver();
-        enterUrl(getPropertyFileValue("url"));
+		//GetDriver();
+//		WebDriverManager.iedriver().setup();
+//			driver = new InternetExplorerDriver();
+		WebDriverManager.chromedriver().setup(); 
+		driver = new ChromeDriver();
+		enterUrl(getPropertyFileValue("url"));
         maximizeWindow();
 
 	
@@ -147,13 +154,14 @@ public class TC2_PersionalSignUpStep extends BaseClass{
 	}
 	@When("user click the Chechbox By signing up, you agreed with terms & condition")
 	public void userClickTheChechboxBySigningUpYouAgreedWithTermsCondition() throws InterruptedException {
-		Thread.sleep(3000);
+		Thread.sleep(6000);
 		pom.getPersionalSignUp().getclickCheckBox().click();
 	    
 		
 	}
 	@Then("User Should Verify after InValid Password error message should come {string}")
 	public void userShouldVerifyAfterInValidPasswordErrorMessageShouldCome(String ExpPassworddidnotmatch) {
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(100));
 		String ActPassworddidnotmatch = pom.getPersionalSignUp().getActPassworddidnotmatch().getText();
 		Assert.assertEquals("Password did not match or password did not match pattern",ExpPassworddidnotmatch,ActPassworddidnotmatch);
 		System.out.println("Password did not match or password did not match pattern");
@@ -186,15 +194,15 @@ public class TC2_PersionalSignUpStep extends BaseClass{
 	@When("user click One more pop up should open with Yes and edit button should be there and click on Yes button")
 	public void userClickOneMorePopUpShouldOpenWithYesAndEditButtonShouldBeThereAndClickOnYesButton() throws InterruptedException {
 	    
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		pom.getPersionalSignUp().getClickYesBtnElement().click();
 	}
 	@Then("User Should Verify after Successfully YujjCard Page is displayed {string}")
 	public void userShouldVerifyAfterSuccessfullyYujjCardPageIsDisplayed(String ExpName) {
-		
-		//String ActName = pom.getPersionalSignUp().getActName().getText();
-		//Assert.assertEquals("AM M",ExpName,ActName);
-		System.out.println("Email already exists, Please try a different one");
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(100));
+		String ActName = pom.getPersionalSignUp().getActName().getText();
+		Assert.assertEquals("AM R",ExpName,ActName);
+		//System.out.println("Email already exists, Please try a different one");
 
 	}
 

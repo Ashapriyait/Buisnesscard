@@ -30,15 +30,13 @@ public class LoginPage extends BaseClass{
 	private WebElement btnClick;
 	
 	@FindBy(xpath="//h1[text()=' Welcome ']")
-	private WebElement message;
+	private WebElement actmessage;
 	
 	@FindBy(xpath="//div[@class=\"alert alert-danger text-center ng-star-inserted\"]")
 	private WebElement actErrorEmail;
 	
 	
-	public WebElement getActErrorEmail() {
-		return actErrorEmail;
-	}
+	
 	@FindBy(xpath="//i[@class='pi pi-ellipsis-h']")
 	private WebElement clickThreeDots;
 	
@@ -53,6 +51,10 @@ public class LoginPage extends BaseClass{
 	
 	@FindBy(xpath=" //div[text()=' Unable to login. Please try again ']")
 	private WebElement actAnabletoLoginMessagElement;
+	
+	public WebElement getActErrorEmail() {
+		return actErrorEmail;
+	}
 	
 	public WebElement getActAnabletoLoginMessagElement() {
 		return actAnabletoLoginMessagElement;
@@ -99,7 +101,7 @@ public class LoginPage extends BaseClass{
 	}
 
 	public WebElement getMessage() {
-		return message;
+		return actmessage;
 	}
 	
 }
