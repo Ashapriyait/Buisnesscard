@@ -8,6 +8,8 @@ Feature: Verifying Yujj SignIn Functionality
     And user click the Remember Me box
     And user click the SignIn button
     Then User Should verify after signin success message "Asha Priya"
+    And user click on Three Dots
+    And user click on SignOut button
     When user enters Invalid email and Password
     And user click the Remember Me box
     And user click the SignIn button
@@ -20,20 +22,22 @@ Feature: Verifying Yujj SignIn Functionality
     And user click the Remember Me box
     And user click the SignIn button
     Then User should verify after enter invalid date error message "Unable to login. Please try again"
-    When user enters Invalid email and Invalid Password
-    And user click the SignIn button
-    Then user Verify after should error message is displayed "Unable to login. Please try again"
-    When user enters email and Password
+    When user enters Valid email and Valid Password
     And user click the Remember Me box
     And user click the SignIn button
     And user click on Three Dots
     And user click on SignOut button
     Then User should verify after Signout successfull SignIn Page "Sign in to your account."
-    When user enters email and Password
+    When user enters Valid email and Valid Password
     And user click on Eye Icon
+    And user click the Remember Me box
+    And user click the SignIn button
+    And user click on Three Dots
+    And user click on SignOut button
+    Then User should verify after Signout successfull SignIn Page "Sign in to your account."
 
-@Smoke
-Scenario: Verifying SignIn functionality for Valid email and valid password
+  @Smoke
+  Scenario: Verifying SignIn functionality for Valid email and valid password
     Given user is on Yujj SignIn page
     When user enters email and password
     And user click the Remember Me box
@@ -43,7 +47,6 @@ Scenario: Verifying SignIn functionality for Valid email and valid password
     And user click the Signout
     Then User should verify after Signout successfull SignIn Page "Sign in to your account."
 
-   
   @Smoke
   Scenario: Verifying SignIn functionality for Eye icon
     Given user is on Yujj SignIn page

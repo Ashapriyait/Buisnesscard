@@ -201,7 +201,7 @@ public class TC2_PersionalSignUpStep extends BaseClass{
 	public void userShouldVerifyAfterSuccessfullyYujjCardPageIsDisplayed(String ExpName) {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(100));
 		String ActName = pom.getPersionalSignUp().getActName().getText();
-		Assert.assertEquals("AM R",ExpName,ActName);
+		Assert.assertEquals("AR R",ExpName,ActName);
 		//System.out.println("Email already exists, Please try a different one");
 
 	}

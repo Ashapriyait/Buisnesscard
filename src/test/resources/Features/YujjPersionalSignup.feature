@@ -1,5 +1,6 @@
 @PersonalSignUp
 Feature: Verifying Yujj UserRegister SignUp Functionality
+	
 	@Regression
   Scenario: Verifying UserRegister functionality for Persional SignUp Page
     Given User is on Yujj SignIn page

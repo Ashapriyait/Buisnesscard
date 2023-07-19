@@ -50,9 +50,12 @@ public class TC1_LogInStep extends BaseClass {
 	//InValid Email and Valid Password
 
 	@When("user enters Invalid email and Password")
-	public void user_enters_invalid_email_and_password() throws IOException {
-         pom.getLoginInPage().getTxtemail().sendKeys(getData("LogIn",2,0));
-         pom.getLoginInPage().getTxtPassword().sendKeys(getData("LogIn",1,1));
+	public void user_enters_invalid_email_and_password() throws IOException, InterruptedException {
+		Thread.sleep(4000);     
+		pom.getLoginInPage().getTxtemail().clear();
+		pom.getLoginInPage().getTxtemail().sendKeys(getData("LogIn",2,0));
+		pom.getLoginInPage().getTxtPassword().clear();
+		pom.getLoginInPage().getTxtPassword().sendKeys(getData("LogIn",1,1));
 	
 	}
 	@Then("User should verify after enter invalid date error message {string}")
@@ -68,8 +71,10 @@ public class TC1_LogInStep extends BaseClass {
 
 	@When("user enters valid email and Invalid Password")
 	public void user_enters_valid_email_and_invalid_password() throws IOException {
-		 pom.getLoginInPage().getTxtemail().sendKeys(getData("LogIn",1,0));
-         pom.getLoginInPage().getTxtPassword().sendKeys(getData("LogIn",2,1));
+		pom.getLoginInPage().getTxtemail().clear();
+		pom.getLoginInPage().getTxtemail().sendKeys(getData("LogIn",1,0));
+		pom.getLoginInPage().getTxtPassword().clear(); 
+		pom.getLoginInPage().getTxtPassword().sendKeys(getData("LogIn",2,1));
 		
 	}
 	
@@ -78,9 +83,10 @@ public class TC1_LogInStep extends BaseClass {
 
 	@When("user enters Invalid email and Invalid Password")
 	public void user_enters_invalid_email_and_invalid_password() throws IOException {
-	
+		 pom.getLoginInPage().getTxtemail().clear();
 		 pom.getLoginInPage().getTxtemail().sendKeys(getData("LogIn",2,0));
-         pom.getLoginInPage().getTxtPassword().sendKeys(getData("LogIn",2,1));
+		 pom.getLoginInPage().getTxtPassword().clear();
+		 pom.getLoginInPage().getTxtPassword().sendKeys(getData("LogIn",2,1));
 	}
 	
 	//RememberMe
@@ -100,13 +106,28 @@ public class TC1_LogInStep extends BaseClass {
 	//ValidLogin
 	
 
+	@When("user enters Valid email and Valid Password")
+	public void userEntersValidEmailAndValidPassword() throws IOException {
+		pom.getLoginInPage().getTxtemail().clear();
+		pom.getLoginInPage().getTxtemail().sendKeys(getData("LogIn",1,0));
+		pom.getLoginInPage().getTxtPassword().clear();
+		pom.getLoginInPage().getTxtPassword().sendKeys(getData("LogIn",1,1));
+	
+	}
+
+
+
+	
+
 	@When("user click on Three Dots")
-	public void user_click_on_three_dots() {
+	public void user_click_on_three_dots() throws InterruptedException {
+		Thread.sleep(1000);
 		pom.getLoginInPage().getClickThreeDots().click();
 	
 	}
 	@When("user click on SignOut button")
-	public void user_click_on_log_out_button() {
+	public void user_click_on_log_out_button() throws InterruptedException {
+		Thread.sleep(1000);
 		pom.getLoginInPage().getClickSignOut().click();
         
 	

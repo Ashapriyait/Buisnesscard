@@ -42,7 +42,7 @@ public class PersionalSignUpPage extends BaseClass{
 	@FindBy(id="new")
 	private WebElement txtConfirmPassword;
 	
-	@FindBy(xpath="//span[@class=\"mat-checkbox-inner-container mat-checkbox-inner-container-no-side-margin\"]")
+	@FindBy(xpath="//mat-checkbox[@class=\"mat-checkbox example-margin mat-accent\"]")
 	private WebElement clickCheckBox;
 	
 	@FindBy(xpath="//button[text()='Sign up']")

@@ -1,6 +1,6 @@
 @CompanySignUp
 Feature: Verifying Yujj UserRegister SignUp Functionality
-@CreateCompanyAccount
+@Regression
   Scenario: Verifying UserRegister functionality for Company SignUp Page
     Given User is on Yujj SignIn page
     When User click the Sign up here
@@ -48,7 +48,7 @@ Feature: Verifying Yujj UserRegister SignUp Functionality
     And user click on SignOut button
     Then User should verify after Signout successfull SignIn Page "Sign in to your account."
 
-	@Asha
+	
  	@Smoke
   Scenario: Verifying UserRegister functionality for Camera Icon
     Given User is on Yujj SignIn page

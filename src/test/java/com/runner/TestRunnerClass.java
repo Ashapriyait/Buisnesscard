@@ -17,7 +17,7 @@ import io.cucumber.junit.Cucumber;
 @CucumberOptions(features="C:\\Users\\Ashapriya_PTS\\New Yujj\\YUJJCard\\src\\test\\resources\\Features",
 dryRun=false,
 glue="com.stepdefinition",
-tags="@Asha",
+tags="@Regression",
 stepNotifications=true,
 monochrome=true,
 snippets=SnippetType.CAMELCASE,
